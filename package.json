@@ -2,7 +2,10 @@
   "name": "video-creator",
   "version": "1.0.0",
   "description": "Video edukasi bisnis berbahasa Indonesia dengan Remotion",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ruas-Digital-Solusindo/kreator-konten-edukasi.git"
+  },
   "license": "MIT",
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24"

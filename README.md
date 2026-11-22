@@ -32,13 +32,13 @@ Tidak perlu Python. Whisper berjalan lewat FFmpeg.
 ## 2. Setup pertama kali
 
 ```bash
-git clone https://github.com/<username>/<nama-repo>.git
-cd <nama-repo>
+git clone https://github.com/Ruas-Digital-Solusindo/kreator-konten-edukasi.git
+cd kreator-konten-edukasi
 npm install                              # wajib, sekali (dan setiap package.json berubah)
 bash tools/whisper/download-model.sh     # model Whisper ~466 MB, sekali saja
 ```
 
-`git clone` membuat folder bernama sama dengan repo. Semua perintah di README dan `AGENTS.md` dijalankan dari **folder utama repo** itu (folder yang berisi `package.json`). Nama foldernya boleh diganti sesuka Anda; tidak ada script yang bergantung pada nama folder.
+`git clone` membuat folder `kreator-konten-edukasi`. Semua perintah di README dan `AGENTS.md` dijalankan dari **folder utama repo** itu (folder yang berisi `package.json`). Nama foldernya boleh diganti sesuka Anda; tidak ada script yang bergantung pada nama folder.
 
 Di Windows, jalankan perintah `bash ...` dari **Git Bash** (atau terminal yang punya `bash`).
 
