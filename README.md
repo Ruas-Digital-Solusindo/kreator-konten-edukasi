@@ -45,7 +45,7 @@ Di Windows, jalankan perintah `bash ...` dari **Git Bash** (atau terminal yang p
 ## 3. Menjalankan
 
 ```bash
-npm run dev                # buka Remotion Studio (preview & edit) di browser
+npm run dev                # buka Remotion Studio (preview & edit) di browser - INI TIDAK HARUS - kamu bisa langsung ke "Membuat Video Baru"
 npx tsc --noEmit           # cek tipe
 ```
 
