@@ -1,7 +1,82 @@
-node_modules
-dist
-.DS_Store
-.env
+# ------------------------------------------------------------
+# Dependencies & build
+# ------------------------------------------------------------
+node_modules/
+dist/
+build/
+.remotion/
+*.tsbuildinfo
 
-# Ignore the output video from Git but not videos you import into src/.
-out
+# ------------------------------------------------------------
+# Hasil render (video, srt, thumbnail) -> out/<nama-video>/
+# ------------------------------------------------------------
+out/
+*.log
+
+# ------------------------------------------------------------
+# Whisper: model besar (~466 MB) + hasil ukur sementara
+# Unduh model dengan: bash tools/whisper/download-model.sh
+# ------------------------------------------------------------
+tools/whisper/*.bin
+tools/whisper/out/
+
+# ------------------------------------------------------------
+# Repo publik berisi alat & aturan saja, plus SATU contoh video.
+# Proyek video lain tetap di laptop, tidak di-upload.
+# Root.tsx menemukan video otomatis (src/<Video>/compositions.tsx),
+# jadi folder yang tidak ikut tidak membuat build gagal.
+# ------------------------------------------------------------
+src/*/
+!src/shared/
+!src/HelloWorld/
+!src/Harta-Lupa-Dihitung/
+!src/Contoh-Three/
+
+narasi/*
+!narasi/HARTA-YANG-LUPA-DIHITUNG/
+
+# ------------------------------------------------------------
+# Repo publik: audio narasi (rekaman suara) TIDAK di-upload.
+# Taruh sendiri di public/ sesuai nama di timeline.ts (NARASI_SRC).
+# ------------------------------------------------------------
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.ogg
+*.flac
+
+# Video mentah / rekaman
+*.mp4
+*.mov
+*.webm
+*.mkv
+
+# ------------------------------------------------------------
+# Foto orang / pihak ketiga (hak cipta & privasi)
+# ------------------------------------------------------------
+public/coach-tom-ifle.png
+public/theresia-learns.png
+narasi/**/*.png
+narasi/**/*.jpg
+src/**/contoh-gambar/
+
+# ------------------------------------------------------------
+# Rahasia & konfigurasi lokal
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Konfigurasi tools AI / editor yang khusus mesin ini
+.claude/
+.freebuff/
+.vscode/
+.idea/
+
+# ------------------------------------------------------------
+# Sampah OS
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini

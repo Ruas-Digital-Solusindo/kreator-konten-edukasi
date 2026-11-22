@@ -1,0 +1,10 @@
+# Normalisasi akhir baris. Script shell WAJIB LF, kalau CRLF bash gagal ("$'\r': command not found").
+* text=auto
+*.sh text eol=lf
+
+# File biner
+*.png binary
+*.jpg binary
+*.mp3 binary
+*.mp4 binary
+*.bin binary

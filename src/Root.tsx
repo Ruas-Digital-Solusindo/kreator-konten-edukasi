@@ -1,56 +1,40 @@
-import { Composition, Folder } from "remotion";
-import { HelloWorld } from "./HelloWorld";
-import { Logo } from "./HelloWorld/Logo";
-import { Title } from "./HelloWorld/Title";
+import React from "react";
 
-// Each <Composition> is an entry in the sidebar!
+/*
+ * Root menemukan video secara otomatis: setiap folder src/<Nama-Video>/ yang punya
+ * file `compositions.tsx` (default export: komponen berisi <Folder>/<Composition>/<Still>)
+ * langsung muncul di Remotion Studio dan bisa dirender.
+ *
+ * Jadi video baru TIDAK perlu didaftarkan di file ini; cukup buat compositions.tsx di foldernya.
+ * Folder video yang tidak ada (mis. tidak ikut di-clone) tidak membuat build gagal.
+ */
 
-export const RemotionRoot: React.FC = () => {
-  return (
-    <>
-      <Folder name="Elements">
-        <Composition
-          id="Logo"
-          component={Logo}
-          durationInFrames={150}
-          fps={30}
-          width={1920}
-          height={1080}
-          defaultProps={{
-            logoColor1: "#91EAE4",
-            logoColor2: "#86A8E7",
-          }}
-        />
-        <Composition
-          id="Title"
-          component={Title}
-          durationInFrames={115}
-          fps={30}
-          width={1920}
-          height={1080}
-          defaultProps={{
-            titleText: "Welcome to Remotion",
-            titleColor: "#000000",
-          }}
-        />
-      </Folder>
-      <Composition
-        // You can take the "id" to render a video:
-        // bunx remotion render HelloWorld
-        id="HelloWorld"
-        component={HelloWorld}
-        durationInFrames={150}
-        fps={30}
-        width={1920}
-        height={1080}
-        // You can override these props for each render:
-        // https://www.remotion.dev/docs/parametrized-rendering
-        defaultProps={{
-          titleText: "Welcome to Remotion",
-          titleColor: "#000000",
-        }}
-      />
+// Tipe untuk require.context (fitur webpack, bundler yang dipakai Remotion).
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace NodeJS {
+    interface Require {
+      context(
+        directory: string,
+        useSubdirectories: boolean,
+        regExp: RegExp,
+      ): { keys(): string[]; (id: string): { default: React.FC } };
+    }
+  }
+}
 
-    </>
-  );
-};
+const ctx = require.context("./", true, /^\.\/[^/]+\/compositions\.tsx$/);
+
+const ENTRIES = ctx
+  .keys()
+  .filter((k) => k.startsWith("./"))
+  .sort()
+  .map((k) => ({ key: k, Comp: ctx(k).default }));
+
+export const RemotionRoot: React.FC = () => (
+  <>
+    {ENTRIES.map(({ key, Comp }) => (
+      <Comp key={key} />
+    ))}
+  </>
+);

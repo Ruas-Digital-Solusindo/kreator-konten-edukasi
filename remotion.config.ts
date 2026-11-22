@@ -8,3 +8,5 @@ import { Config } from "@remotion/cli/config";
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+// Diperlukan agar WebGL (three.js) bisa dirender. Lihat tutorial/three-js-dengan-remotion.md
+Config.setChromiumOpenGlRenderer("angle");

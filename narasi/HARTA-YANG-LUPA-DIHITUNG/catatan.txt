@@ -1,0 +1,57 @@
+# naskah
+Ada harta kamu yang tidak kelihatan di toko. Tidak ada di gudang, tidak ada di rekening. Tapi nilainya bisa puluhan juta.
+
+Namanya piutang. Sederhananya, hartamu yang sedang dipegang orang lain.
+
+Dan bentuknya ada dua. Ini perlu dipisahkan, supaya tidak keliru.
+
+Yang pertama, hak menerima uang. Ini yang nanti benar-benar kembali jadi uang tunai.
+
+Contoh paling umum, piutang penjualan. Barang sudah kamu kirim, nota sudah ditulis, tapi pelanggan belum bayar. Di laporan, penjualan itu sudah dihitung. Di dompet, uangnya belum ada.
+
+Ada juga piutang lainnya. Karyawan pinjam uang, dipotong dari gaji bulan depan. Atau pajak yang kamu bayar lebih, dan akan dikembalikan.
+
+Yang kedua, hak menerima barang atau jasa. Ini tetap hartamu, tapi kembalinya bukan uang.
+
+Contohnya uang muka pembelian. Kamu sudah bayar ke pemasok, barangnya belum datang.
+
+Lalu uang jaminan. Deposit sewa kios, atau jaminan krat dan tabung dari distributor. Uang itu tetap milikmu, cuma dititipkan selama kerja sama masih jalan.
+
+Dan pembayaran di muka, misalnya sewa setahun yang dibayar sekaligus. Yang ini tidak kembali jadi uang. Tapi tetap harta, karena kamu tidak perlu bayar sewa lagi sampai tahun depan.
+
+Satu hal penting. Piutang yang bertahun-tahun tidak tertagih, itu bukan harta lagi. Itu kerugian yang belum kamu akui. Dan selama belum diakui, usahamu terlihat lebih kaya daripada kenyataannya.
+
+Semua yang tadi ada di neracamu, di sisi kiri, bagian harta. Coba buka neracamu hari ini, dan jumlahkan.
+
+Jadi, berapa hartamu yang sekarang masih ada di tangan orang lain?
+
+# Judul thumbnail
+"HARTA YANG LUPA DIHITUNG"
+
+# VISUAL
+Detik	Isi	Visual
+0–10	Hook	Tiga tempat dicoret satu per satu: toko, gudang, rekening
+10–16	Definisi piutang	Ikon uang berpindah dari tanganmu ke tangan orang lain
+16–21	Dua bentuk	Layar terbagi dua: UANG / BARANG & JASA
+21–27	Kelompok 1	Sisi atas disorot, ikon uang kembali
+27–40	Piutang penjualan	Nota terkirim, kolom LUNAS kosong
+40–50	Piutang lainnya	Slip gaji dengan baris potongan, dan bukti pajak
+50–57	Kelompok 2	Sisi bawah disorot, ikon dus dan kunci
+57–64	Uang muka pembelian	Uang keluar, truk belum datang
+64–76	Uang jaminan	Krat minuman dan tabung gas, diberi label "dititipkan"
+76–90	Pembayaran di muka	Kalender 12 bulan, bulan-bulan menyala satu per satu
+90–104	Peringatan	Nota berdebu bertanggal 3 tahun lalu, lalu dicap merah
+104–112	Tunjuk ke neraca	Neraca bertumpuk, baris-baris piutang di sisi harta disorot
+112–118	CTA	Teks "BERAPA HARTAMU DI TANGAN ORANG LAIN?"
+
+# catatan teknis
+1. Detik 104–112 adalah inti permintaanmu, jadi jangan buru-buru. Tampilkan neraca bentuk bertumpuk (bukan dua kolom kiri-kanan), lalu sorot baris piutang penjualan, uang muka, dan uang jaminan secara berurutan. Penonton perlu melihat bahwa semuanya ada di satu tempat.
+2. Detik 90–104 harus terasa beda warnanya. Ini satu-satunya peringatan di video yang isinya kabar baik, jadi perubahan warna ke merah membuat penonton berhenti sejenak dan mengingatnya.
+3. akhir video; motion grafik seperti gambar ini "public/ruas-accounting-end.png"
+
+# nuansa warna
+- putih
+- navy → cyan
+
+# audio
+harta-lupa-dihitung.mp3
